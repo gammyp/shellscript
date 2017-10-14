@@ -36,6 +36,8 @@ chage -d 0 $User
 
 sudo yum remove -y git
 
+cd ..
+
 rm -rf shellscript
 
 echo "Complete!!!"
