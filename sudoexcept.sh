@@ -38,6 +38,8 @@ sudo yum remove -y git
 
 cd ..
 
+hostname centos
+
 rm -rf shellscript
 
 echo "Complete!!!"
