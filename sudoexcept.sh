@@ -22,6 +22,7 @@ cat > exceptcommand << END
 %ServerAdmin ALL=NOPASSWD: /usr/bin/mv
 %ServerAdmin ALL=NOPASSWD: /usr/bin/cp
 %ServerAdmin ALL=NOPASSWD: /usr/bin/rm
+%ServerAdmin ALL=NOPASSWD: /usr/bin/yum
 
 END
 
