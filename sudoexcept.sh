@@ -3,11 +3,11 @@ $User
 echo "Enter username : "
 read User
 
-useradd $User
+sudo useradd $User
 
-groupadd ServerAdmin
+sudo groupadd ServerAdmin
 
-usermod -a -G ServerAdmin $User
+sudo usermod -a -G ServerAdmin $User
 
 touch exceptcommand
 
@@ -25,12 +25,14 @@ cat > exceptcommand << END
 
 END
 
-mv exceptcommand /etc/sudoers.d
+sudo mv exceptcommand /etc/sudoers.d
 
 echo "Please create password for user"
 
-passwd $User
+sudo passwd $User
 
 chage -d 0 $User
+
+sudo yum remove -y git
 
 echo "Complete!!!"
