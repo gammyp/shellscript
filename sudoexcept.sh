@@ -13,6 +13,9 @@ touch exceptcommand
 
 cat > exceptcommand << END
 
+%ServerAdmin ALL=NOPASSWD: /usr/sbin/chmod
+%ServerAdmin ALL=NOPASSWD: /usr/sbin/chown
+%ServerAdmin ALL=NOPASSWD: /usr/bin/mkdir
 %ServerAdmin ALL=NOPASSWD: /usr/bin/nano
 %ServerAdmin ALL=NOPASSWD: /usr/bin/vi
 %ServerAdmin ALL=NOPASSWD: /usr/sbin/service
@@ -23,6 +26,15 @@ cat > exceptcommand << END
 %ServerAdmin ALL=NOPASSWD: /usr/bin/cp
 %ServerAdmin ALL=NOPASSWD: /usr/bin/rm
 %ServerAdmin ALL=NOPASSWD: /usr/bin/yum
+%ServerAdmin ALL=NOPASSWD: /usr/bin/systemctl
+%ServerAdmin ALL=NOPASSWD: /usr/sbin/nginx
+%ServerAdmin ALL=NOPASSWD: /usr/sbin/restorecon
+%ServerAdmin ALL=NOPASSWD: /usr/bin/chcon
+%ServerAdmin ALL=NOPASSWD: /usr/sbin/semanage
+%ServerAdmin ALL=NOPASSWD: /usr/bin/pm2
+%ServerAdmin ALL=NOPASSWD: /usr/bin/npm
+%ServerAdmin ALL=NOPASSWD: /usr/bin/yarn
+
 
 END
 
